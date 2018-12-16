@@ -7,7 +7,7 @@ Create Order Web Service
 
 ## Order Service Collection [/orders]
 
-### Create New Order [POST] 
+### Create New Order [POST /createorder] 
 
 Create a new Order
 
@@ -20,7 +20,7 @@ Create a new Order
             "Qty": "Order Quantity"
         }
         
-+ Response 201 (application/json)
++ Response 200 (application/json)
 
 
    + Body
@@ -31,17 +31,17 @@ Create a new Order
              "OrderID": "ORDER300281"
              
             }
-### Get Order Details [GET] 
+### Get Order Details [GET /orderdetails] 
 
 Get an Order Details
 
 +  Request (application/json)
 
         {
-            "OrderID": "OrderID"
+            "OrderID": 1234
         }
         
-+ Response 201 (application/json)
++ Response 200 (application/json)
 
 
    + Body
@@ -53,5 +53,4 @@ Get an Order Details
              "CustomerName": "Rakesh Soni",
              "Price": "10.50",
              "Qty": "15"
-             
-            }
+             }
